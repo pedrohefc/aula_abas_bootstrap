@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap - modal</title>
+    <link rel="stylesheet" href="./LIB/bootstrap.min.css">
+</head>
+<body>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vamo">
+        abrir modal
+    </button>
+    <div class="modal" id="vamo" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Título da modal</h5>
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <p class="modal-body">
+                    Corpo da modal- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                </p>
+                <h5 class="modal-footer">
+                    rodapé da modal
+                </h5>
+            </div>
+        </div>
+    </div>
+
+    <script src="./LIB/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMcontentLoaded', function(){
+            const modalExemplo = new bootstrap.Modal('#vamo')
+            setTimeout(function(){
+                modalExemplo.show()
+            }, 3000)
+        })
+    </script>
+</body>
+</html>
